@@ -1,0 +1,32 @@
+<?php
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Bootcamp\MarvelApp\ViewModel\MarvelViewModel $viewModel
+ * @var \Bootcamp\MarvelApp\Model\Config $config
+ * */
+
+$viewModel = $block->getData('view_model');
+
+?>
+
+<?php if($viewModel->getEnabled()): ?>
+    <h1><?= $escaper->escapeHtml(__("Marvel Characters")) ?></h1>
+
+<div class="characters">
+    <?php foreach( $viewModel->getCharacters() as $character ): ?>
+        <div class="character-item">
+            <h2 class="character-name"><?= $escaper->escapeHtml($character['name']) ?></h2>
+        </div>
+        <div class="character-img">
+                <img style="width: 300px; height:300px;" src="<?= $escaper->escapeUrl($character['thumbnail']['path'].".".$character['thumbnail']['extension'])?>" alt="<?= $escaper->escapeHtml($character['name']) ?>">
+            </div>
+        <div class="character-description">
+            <h6 class="character-description"><?= $escaper->escapeHtml($character['description']) ?></h6>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<?php else: ?>
+<h1><?= $escaper->escapeHtml(__("Marvel App is disabled")) ?></h1>
+<?php endif; ?> 

@@ -1,0 +1,37 @@
+.rickandmortyapp-index-index {
+    .characters {
+        .character-item {
+            .news-tb {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+              
+                tbody,
+                tr,
+                td {
+                  display: flex;
+                }
+              
+                tbody {
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                }
+              
+                .news-row {
+                  flex: 1 1 25%;
+                }
+            }
+            .character-content{
+                text-align: center;
+                -webkit-box-shadow: 6px 4px 9px -1px #959595; 
+                box-shadow: 6px 4px 9px -1px #959595;
+                cursor: pointer;
+                transition: ease-in-out 1s;
+            }
+            .character-content:hover{
+                transition: ease-in-out 1s;
+                transform: scale(0.9);
+            }
+        }
+    }
+}
