@@ -1,0 +1,14 @@
+<?php
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Bootcamp\Mascotas\ViewModel\ListarMascotasViewModel $viewModel
+*/
+$viewModel = $block->getData('view_model');
+?>
+
+<h1><?= __("Lista de Mascotas") ?></h1>
+<?php foreach($viewModel->getMascotas("Criollo") as $item): ?>
+    <h2><?= $item->getNombre() ?></h2>
+<?php endforeach; ?>
+
+<?= $block->getChildHtml('bootcamp.mascotas.form') ?>

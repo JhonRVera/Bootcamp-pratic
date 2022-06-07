@@ -1,0 +1,15 @@
+{
+    "bootcamp_useropinion": {
+        "column": {
+            "opinion_id": true,
+            "sku": true,
+            "user_email": true,
+            "puntuacion": true,
+            "opinion": true,
+            "fecha": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

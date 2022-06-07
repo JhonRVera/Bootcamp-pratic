@@ -12,11 +12,11 @@ $viewModel = $block->getData('view_model');
 <h1><?= $escaper->escapeHtml(__("Rick and Morty Characters")) ?></h1>
 
 <div class="characters">
-    <div class="character-item">
-        <table class="news-tb">
+    <div class="character-item"> 
+        <div class="news-tb">
             <?php foreach( $viewModel->getCharacters() as $character ): ?>
-                    <tr class="news-row">
-                        <td>
+                    <div class="news-row">
+                        <div>
                             <div class="character-content">
                                 <h2><?= $escaper->escapeHtml($character['name']) ?></h2><br>
                                 <div><img src="<?= $escaper->escapeUrl($character['image']) ?>" alt="<?= $escaper->escapeHtml($character['name']) ?>"></div>
@@ -27,10 +27,10 @@ $viewModel = $block->getData('view_model');
                                     <div>Genero: <?= $escaper->escapeHtml($character['gender']) ?><br></div>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 <?php endforeach; ?> 
-        </table>
+        </div>
     </div>
 </div>
 

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Bootcamp_Mascotas::bootcamp" title="OMNI.PRO Bootcamp" sortOrder="99">
+                    <resource id="Bootcamp_Mascotas::mascotas_management" title="Administracion de Mascotas" sortOrder="99" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
