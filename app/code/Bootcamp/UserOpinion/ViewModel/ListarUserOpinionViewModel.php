@@ -7,7 +7,7 @@ use \Bootcamp\UserOpinion\Model\ResourceModel\UserOpinion\CollectionFactory as U
 class ListarUserOpinionViewModel implements \Magento\Framework\View\Element\Block\ArgumentInterface
 {
     /**
-     * @param Bootcamp\UserOpinion\Model\ResourceModel\UserOpinion\CollectionFactory
+     * @param UserOpinionCollectionFactory
      */
     private $useropinionCollectionFactory;
 

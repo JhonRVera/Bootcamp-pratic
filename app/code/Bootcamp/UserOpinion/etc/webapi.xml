@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/useropinion" method="GET">
+        <service class="Bootcamp\UserOpinion\Api\UserOpinionRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/UserOpinion/:id" method="GET">
+        <service class="Bootcamp\UserOpinion\Api\UserOpinionRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/UserOpinion" method="POST">
+        <service class="Bootcamp\UserOpinion\Api\UserOpinionRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Bootcamp_UserOpinion::useropinion_management"/>
+        </resources>
+    </route>
+    <route url="/V1/UserOpinion" method="PUT">
+        <service class="Bootcamp\UserOpinion\Api\UserOpinionRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Bootcamp_UserOpinion::useropinion_management"/>
+        </resources>
+    </route>
+    <route url="/V1/UserOpinion/:id" method="DELETE">
+        <service class="Bootcamp\UserOpinion\Api\UserOpinionRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Bootcamp_UserOpinion::useropinion_management"/>
+        </resources>
+    </route>
+</routes>

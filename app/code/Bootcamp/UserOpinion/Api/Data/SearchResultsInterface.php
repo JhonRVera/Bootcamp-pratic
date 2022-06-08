@@ -1,19 +1,18 @@
 <?php
-namespace Bootcamp\Mascotas\Api\Data;
+namespace Bootcamp\UserOpinion\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
 
 interface SearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {
     /**
-     * @return \Bootcamp\Mascotas\Api\Data\MascotasInterface[]
+     * @return \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface[]
      */
     public function getItems();
 
     /**
-     * @param \Bootcamp\Mascotas\Api\Data\MascotasInterface $items
+     * @param \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface $items
      * @return $this
      */
     public function setItems($items);
 }
-  

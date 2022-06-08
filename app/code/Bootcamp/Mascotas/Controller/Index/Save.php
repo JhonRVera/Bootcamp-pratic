@@ -47,7 +47,7 @@ class Save implements \Magento\Framework\App\Action\HttpPostActionInterface
         \Magento\Framework\View\Result\PageFactory $pageFactory,
         \Magento\Framework\App\RequestInterface $_request,
         \Magento\Framework\Controller\Result\RedirectFactory $_redirectFactory,
-        \Bootcamp\Mascotas\Api\Data\MascotasInterfaceFactory $_mascotasFactory,
+        \Bootcamp\Mascotas\Api\Data\MascotasInterfaceFactory $_mascotasFactory,   
         \Magento\Framework\Message\ManagerInterface $_messageManager,
         \Bootcamp\Mascotas\Api\MascotasRepositoryInterface $_mascotasRepository,
         \Psr\Log\LoggerInterface $_logger
@@ -56,7 +56,7 @@ class Save implements \Magento\Framework\App\Action\HttpPostActionInterface
         $this->_pageFactory = $pageFactory;
         $this->_request = $_request;
         $this->_redirectFactory = $_redirectFactory;
-        $this->_mascotasFactory = $_mascotasFactory;
+        $this->_mascotasFactory = $_mascotasFactory; 
         $this->_messageManager = $_messageManager;
         $this->_mascotasRepository = $_mascotasRepository;
         $this->_logger = $_logger;

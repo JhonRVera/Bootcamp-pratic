@@ -1,7 +1,11 @@
 <?php
 namespace Bootcamp\UserOpinion\Model;
 
-class UserOpinion extends \Magento\Framework\Model\AbstractModel implements \Magento\Framework\DataObject\IdentityInterface
+use \Magento\Framework\Model\AbstractModel;
+use \Magento\Framework\DataObject\IdentityInterface;
+use \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface;
+
+class UserOpinion extends AbstractModel implements IdentityInterface, UserOpinionInterface
 {
     const CACHE_TAG = 'bootcamp_useropinion_user_opinion';
 
@@ -37,5 +41,45 @@ class UserOpinion extends \Magento\Framework\Model\AbstractModel implements \Mag
     public function getIdentities()
     {
         return [self::CACHE_TAG . '_' . $this->getId()];
+    }
+
+    public function getUser_email()
+    {
+        return $this->getData('user_email');
+    }
+
+    public function setUser_email($user_email)
+    {
+        $this->setData('user_email', $user_email);
+    }
+
+    public function getPuntuacion()
+    {
+        return $this->getData('puntuacion');
+    }
+
+    public function setPuntuacion($puntuacion)
+    {
+        $this->setData('puntuacion', $puntuacion);
+    }
+
+    public function getOpinion()
+    {
+        return $this->getData('opinion');
+    }
+
+    public function setOpinion($opinion)
+    {
+        $this->setData('opinion', $opinion);
+    }
+
+    public function getFecha()
+    {
+        return $this->getData('fecha');
+    }
+
+    public function setFecha($fecha)
+    {
+        $this->setData('fecha', $fecha);
     }
 }

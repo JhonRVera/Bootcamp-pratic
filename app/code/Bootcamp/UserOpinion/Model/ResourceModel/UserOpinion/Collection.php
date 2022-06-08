@@ -15,12 +15,13 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     protected function _construct()
     {
         $this->_init(
-            \Bootcamp\UserOpinion\Model\UserOpinion::class, 
+            \Bootcamp\UserOpinion\Model\UserOpinion::class,
             \Bootcamp\UserOpinion\Model\ResourceModel\UserOpinion::class
         );
     }
 
-    public function filterBySku($sku) {
+    public function filterBySku($sku)
+    {
         $this->addFieldToFilter('sku', ['eq' => $sku]);
     }
 }
