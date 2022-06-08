@@ -6,21 +6,18 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
-
     <route url="/V1/mascotas/:id" method="GET">
         <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="getById"/>
         <resources>
             <resource ref="anonymous"/>
         </resources>
     </route>
-
     <route url="/V1/mascotas" method="POST">
         <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="save"/>
         <resources>
             <resource ref="Bootcamp_Mascotas::mascotas_management"/>
         </resources>
     </route>
-
     <route url="/V1/mascotas" method="PUT">
         <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="save"/>
         <resources>
@@ -33,5 +30,4 @@
             <resource ref="Bootcamp_Mascotas::mascotas_management"/>
         </resources>
     </route>
-
-</routes>
+</routes> 

@@ -1,5 +1,6 @@
 <?php
 namespace Bootcamp\Mascotas\Model;
+
 use Bootcamp\Mascotas\Api\Data\MascotasInterface;
 use Magento\Framework\Exception\LocalizedException;
 use DomainException;
@@ -48,31 +49,30 @@ class MascotasRepository implements MascotasRepositoryInterface
         $this->_mascotasFactory = $_mascotasFactory;
         $this->_mascotasResourceModel = $_mascotasResourceModel;
         $this->_mascotasCollectionFactory = $_mascotasCollectionFactory;
-        $this->searchResultsInterfaceFactory = $_searchResultsInterfaceFactory;
-        $this->collectionProcessor = $_collectionProcessor;
+        $this->_searchResultsInterfaceFactory = $_searchResultsInterfaceFactory;
+        $this->_collectionProcessor = $_collectionProcessor;
     }
 
     public function getList($searchCriteria) {
         $collection = $this->_mascotasCollectionFactory->create();
-        $this-> _collectionProcesor->process($searchCriteria,$collection);
+        $this->_collectionProcessor->process($searchCriteria, $collection);
 
-        $searchResults = $this ->_searchResultsInterfaceFactory->create();
+        $searchResults = $this->_searchResultsInterfaceFactory->create();
         $searchResults->setSearchCriteria($searchCriteria);
         $searchResults->setItems($collection->getItems());
         $searchResults->setTotalCount($collection->getSize());
-        
         return $searchResults;
     }
 
     /**
-     * 
-     * @param int $id 
-     * @return Mascotas 
-     * @throws LocalizedException 
-     * @throws DomainException 
-     * @throws RuntimeException 
-     * @throws InvalidArgumentException 
-     * @throws NoSuchEntityException 
+     *
+     * @param int $id
+     * @return Mascotas
+     * @throws LocalizedException
+     * @throws DomainException
+     * @throws RuntimeException
+     * @throws InvalidArgumentException
+     * @throws NoSuchEntityException
      */
     public function getById($id) {
         /**
@@ -80,7 +80,7 @@ class MascotasRepository implements MascotasRepositoryInterface
          */
         $mascota = $this->_mascotasFactory->create();
         $this->_mascotasResourceModel->load($mascota, $id);
-        if(!$mascota->getId()) {
+        if (!$mascota->getId()) {
             throw new NoSuchEntityException(__("No existe una mascota con este id"));
         }
         return $mascota;
@@ -88,28 +88,45 @@ class MascotasRepository implements MascotasRepositoryInterface
 
     /**
      * Guarda una mascota en la bd
-     * @param Mascotas $mascota 
-     * @return void 
-     * @throws CouldNotSaveException 
+     * @param Mascotas $mascota
+     * @return Mascotas
+     * @throws CouldNotSaveException
      */
-    public function save($mascota) {
+    public function save($mascota)
+    {
         try {
             $this->_mascotasResourceModel->save($mascota);
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             throw new CouldNotSaveException(__($e->getMessage()));
         }
         return $mascota;
     }
 
+    /**
+     * @param int $id
+     * @return bool
+     * @throws LocalizedException
+     * @throws DomainException
+     * @throws RuntimeException
+     * @throws InvalidArgumentException
+     * @throws NoSuchEntityException
+     * @throws CouldNotDeleteException
+     */
     public function deleteById($id) {
         $this->delete($this->getById($id));
         return true;
     }
 
-    public function delete($mascota) {
+    /**
+     * @param Mascotas $mascota
+     * @return bool
+     * @throws CouldNotDeleteException
+     */
+    public function delete($mascota)
+    {
         try {
             $this->_mascotasResourceModel->delete($mascota);
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             throw new CouldNotDeleteException(__($e->getMessage()));
         }
         return true;

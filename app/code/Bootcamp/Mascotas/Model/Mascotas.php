@@ -5,7 +5,8 @@ use \Magento\Framework\Model\AbstractModel;
 use \Magento\Framework\DataObject\IdentityInterface;
 use \Bootcamp\Mascotas\Api\Data\MascotasInterface;
 
-class Mascotas extends AbstractModel implements IdentityInterface, MascotasInterface{
+class Mascotas extends AbstractModel implements IdentityInterface, MascotasInterface
+{
     const CACHE_TAG = 'bootcamp_mascotas_mascotas';
 
     /**
@@ -42,32 +43,43 @@ class Mascotas extends AbstractModel implements IdentityInterface, MascotasInter
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
 
-    public function getNombre(){
+    public function getNombre()
+    {
         return $this->getData('nombre');
     }
-    public function setNombre($nombre){
-        $this->setData('nombre',$nombre);
+
+    public function setNombre($nombre)
+    {
+        $this->setData('nombre', $nombre);
     }
 
-     public function getEspecie(){
+    public function getEspecie()
+    {
         return $this->getData('especie');
-     }
- 
-    public function setEspecie($especie){
-        $this->setData('especie',$especie);
     }
 
-    public function geTraza(){
+    public function setEspecie($especie)
+    {
+        $this->setData('especie', $especie);
+    }
+
+    public function getRaza()
+    {
         return $this->getData('raza');
     }
-    public function setRaza($raza){
-        $this->setData('raza',$raza);
+
+    public function setRaza($raza)
+    {
+        $this->setData('raza', $raza);
     }
 
-    public function getEdad(){
+    public function getEdad()
+    {
         return $this->getData('edad');
     }
-    public function setEdad($edad){
-        $this->setData('edad',$edad);
+
+    public function setEdad($edad)
+    {
+        $this->setData('edad', $edad);
     }
 }
