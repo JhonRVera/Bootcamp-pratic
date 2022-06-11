@@ -9,7 +9,7 @@ interface MascotasInterface
     public function getId();
     
     /**
-     * @param int $id
+     * @param int $id 
      * @return void
      */
     public function setId($id);

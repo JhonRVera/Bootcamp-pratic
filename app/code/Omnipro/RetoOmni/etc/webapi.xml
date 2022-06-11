@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/retoomni" method="GET">
+        <service class="Omnipro\RetoOmni\Api\RetoOmniRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/retoomni/:id" method="GET">
+        <service class="Omnipro\RetoOmni\Api\RetoOmniRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/retoomni/" method="POST">
+        <service class="Omnipro\RetoOmni\Api\RetoOmniRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Omnipro_RetoOmni::retoomni"/>
+        </resources>
+    </route>
+    <route url="/V1/retoomni/" method="PUT">
+        <service class="Omnipro\RetoOmni\Api\RetoOmniRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Omnipro_RetoOmni::retoomni"/>
+        </resources>
+    </route>
+    <route url="/V1/retoomni/:id" method="DELETE">
+        <service class="Omnipro\RetoOmni\Api\RetoOmniRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Omnipro_RetoOmni::retoomni"/>
+        </resources>
+    </route>
+</routes>

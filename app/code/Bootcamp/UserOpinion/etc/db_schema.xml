@@ -3,6 +3,7 @@
     <table name="bootcamp_useropinion" resource="default" engine="innodb" comment="User Opinion Table">
         <column xsi:type="int" name="opinion_id" padding="10" unsigned="true" nullable="false" identity="true" comment="User Opinion Id"/>
         <column xsi:type="varchar" name="sku" nullable="false" length="255" comment="User Opinion SKU"/>
+        <column xsi:type="varchar" name="nombre" nullable="false" length="255" comment="User nombre"/>
         <column xsi:type="varchar" name="user_email" nullable="false" length="255" comment="User Opinion Email"/>
         <column xsi:type="float" name="puntuacion" nullable="false" comment="User Opinon Puntuacion"/>
         <column xsi:type="varchar" name="opinion" nullable="false" length="255" comment="User Opinion"/>

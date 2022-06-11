@@ -9,7 +9,7 @@ interface MascotasRepositoryInterface
      * @return \Bootcamp\Mascotas\Api\Data\SearchResultsInterface
      */
     public function getList($searchCriteria);
-
+ 
     /**
      * Obtiene una mascota por su id
      * @param int $id

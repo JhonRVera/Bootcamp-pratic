@@ -3,9 +3,9 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Bootcamp_Mascotas::bootcamp" title="OMNI.PRO Bootcamp" sortOrder="99">
-                    <resource id="Bootcamp_Mascotas::mascotas_management" title="Administracion de Mascotas" sortOrder="99" >
-                        <resource id="Bootcamp_Mascotas::nuevamascota" title="Creacion nueva Mascota"/>
+                <resource id="Omnipro_RetoOmni::retoomni" title="OMNI.PRO BLOG" sortOrder="99">
+                    <resource id="Omnipro_RetoOmni::reto_blog" title="Blog" sortOrder="99">
+                        <resource id="Omnipro_RetoOmni::agregar" title="Agregar Blog" sortOrder="10"/>
                     </resource>
                 </resource>
             </resource>

@@ -1,6 +1,7 @@
 <?php
 /** 
  * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
  * @var \Bootcamp\UserOpinion\ViewModel\ListarUserOpinionViewModel $viewModel
 */
 
@@ -8,20 +9,20 @@ use Magento\Config\Model\Config\Source\Locale\Currency\All;
 
 $viewModel = $block->getData('view_model');?>
 <div class="product-opinion">
-    <h1><?= __("Lista de User Opinion") ?></h1>
+    <h1><?= $escaper->escapeHtml(__("Opiniones Recibidas")) ?></h1>
         <div class="aling-item">
             <?php foreach($viewModel->getUserOpinion("1010") as $item): ?>
                 <div class="calification">
                     <div class="content-product">
-                            <div class="botr">SKU:<?=$item->getSku()?></div>
-                            <div class="botr">E-mail: <?= $item->getUser_email() ?></div> 
-                            <div class="botr">Puntucacion: <?= $item->getPuntuacion() ?> </div>                    
-                            <div class="botr">Opinion: <?= $item->getOpinion() ?> </div>                                 
-                            <div class="botr">Fecha: <?= $item->getFecha() ?></div>
+                            <div class="botr">SKU:<?=$escaper->escapeHtml($item->getSku())?></div>
+                            <div class="botr">E-mail: <?=$escaper->escapeHtml ($item->getUser_email() )?></div> 
+                            <div class="botr">Puntucacion: <?=$escaper->escapeHtml ($item->getPuntuacion()) ?> </div>                    
+                            <div class="botr">Opinion: <?= $escaper->escapeHtml($item->getOpinion()) ?> </div>                                 
+                            <div class="botr">Fecha: <?= $escaper->escapeHtml($block->formatTime($item->getFecha(),\IntlDateFormatter::MEDIUM,true)) ?></div>
                     </div>
                 </div>
                 <?php endforeach; ?>  
         </div>
 </div>
-<h1>Agregar Opinion</h1>
+<h1>Agregar Opinion</h1> 
 <?= $block->getChildHtml('bootcamp.useropinion.form') ?>

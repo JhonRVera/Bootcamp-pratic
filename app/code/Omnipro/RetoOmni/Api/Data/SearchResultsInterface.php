@@ -1,18 +1,19 @@
 <?php
-namespace Bootcamp\UserOpinion\Api\Data;
+namespace Omnipro\RetoOmni\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
 
 interface SearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {
     /**
-     * @return \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface[]
+     * @return \Omnipro\RetoOmni\Api\Data\RetoOmniInterface[]
      */
     public function getItems();
 
     /**
-     * @param \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface $items
+     * @param \Omnipro\RetoOmni\Api\Data\RetoOmniInterface $items
      * @return $this
      */
     public function setItems($items);
-} 
+}
+ 

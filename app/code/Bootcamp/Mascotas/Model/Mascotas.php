@@ -22,7 +22,7 @@ class Mascotas extends AbstractModel implements IdentityInterface, MascotasInter
      * @var string
      */
     protected $_eventPrefix = 'mascotas';
-
+ 
     /**
      * Initialize resource model
      *

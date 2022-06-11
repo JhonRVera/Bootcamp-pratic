@@ -11,6 +11,8 @@ class MarvelViewModel implements ArgumentInterface
     private $MarvelApi;
 
     /**
+     * 
+     * 
      * @param \Bootcamp\MarvelApp\Model\Config
      */
     private $config;
