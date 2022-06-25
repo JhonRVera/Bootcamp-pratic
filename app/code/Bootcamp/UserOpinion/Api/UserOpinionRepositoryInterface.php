@@ -37,5 +37,6 @@ interface UserOpinionRepositoryInterface
      * @return bool
      * @throws CouldNotDeleteException
      */
-    public function delete($useropinion);
+    
+     public function delete($useropinion);
 }
