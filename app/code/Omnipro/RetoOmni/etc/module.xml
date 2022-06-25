@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Omnipro_RetoOmni" setup_version="1.0.0" />
 </config>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Omnipro_RetoOmni" setup_version="1.0.0" />
+</config>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

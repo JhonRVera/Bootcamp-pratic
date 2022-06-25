@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 namespace Bootcamp\UserOpinion\Api\Data;
 
@@ -16,3 +17,23 @@ interface SearchResultsInterface extends \Magento\Framework\Api\SearchResultsInt
      */
     public function setItems($items);
 } 
+=======
+<?php
+namespace Bootcamp\UserOpinion\Api\Data;
+
+use Magento\Framework\Api\ExtensibleDataInterface;
+
+interface SearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
+{
+    /**
+     * @return \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface[]
+     */
+    public function getItems();
+
+    /**
+     * @param \Bootcamp\UserOpinion\Api\Data\UserOpinionInterface $items
+     * @return $this
+     */
+    public function setItems($items);
+} 
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

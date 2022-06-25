@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
@@ -5,4 +6,13 @@
             <uiComponent name="omnipro_retoomni_grid"/>
         </referenceContainer>
     </body>
+=======
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="omnipro_retoomni_grid"/>
+        </referenceContainer>
+    </body>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </page>

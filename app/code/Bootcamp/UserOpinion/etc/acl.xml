@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
     <acl>
@@ -7,4 +8,15 @@
             </resource>
         </resources>
     </acl>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Bootcamp_UserOpinion::useropinion_management" title="Administración de UserOpinion" sortOrder="99"/>
+            </resource>
+        </resources>
+    </acl>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </config>

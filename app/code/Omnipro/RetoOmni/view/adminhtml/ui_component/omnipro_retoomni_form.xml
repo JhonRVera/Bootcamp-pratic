@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
@@ -101,4 +102,109 @@
             </argument>
         </field>
     </fieldset>
+=======
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">omnipro_retoomni_form.omnipro_retoomni_form_data_source</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/agregar"/>
+                <class>primary</class>
+                <label translate="true">Guardar</label>
+            </button>
+
+        </buttons>
+        <dataScope>data</dataScope>
+        <namespace>omnipro_retoomni_form</namespace>
+        <deps>
+            <dep>omnipro_retoomni_form.omnipro_retoomni_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="omnipro_retoomni_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="*/*/agregar"/>
+        </settings>
+        <dataProvider class="Omnipro\RetoOmni\Ui\DataProvider\RetoOmni\DataProvider" name="omnipro_retoomni_form_data_source">
+            <settings>
+                <requestFieldName>blog_id</requestFieldName>
+                <primaryFieldName>blog_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label translate="true">Detalles del Blog</label>
+        </settings>
+        <field name="blog_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">Blog</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>id</dataScope>
+            </settings>
+        </field>
+        <field name="titulo" formElement="input" sortOrder="10">
+            <settings>
+                <label translate="true">Titulo</label>
+                <dataScope>titulo</dataScope>
+            </settings>
+        </field>
+        <field name="status" formElement="select" sortOrder="11">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Select Example</label>
+                <dataScope>select_example</dataScope>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">1</item>
+                                <item name="label" xsi:type="string">Borrador</item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="value" xsi:type="string">2</item>
+                                <item name="label" xsi:type="string">Publicado</item>
+                            </option>
+                        </options>
+                        <caption translate="true">Elija Una Opcion</caption>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="categoria" formElement="input" sortOrder="12">
+            <settings>
+                <label translate="true">Categoria</label>
+                <dataScope>categoria</dataScope>
+            </settings>
+        </field>
+        <field name="contenido" sortOrder="13">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="formElement" xsi:type="string">textarea</item>
+                    <item name="cols" xsi:type="number">15</item>
+                    <item name="rows" xsi:type="number">5</item>
+                    <item name="label" translate="true" xsi:type="string">Contenido</item>
+                    <item name="dataType" translate="true" xsi:type="string">text</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </form> 

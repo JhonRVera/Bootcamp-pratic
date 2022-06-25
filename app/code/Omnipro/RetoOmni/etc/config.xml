@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
@@ -7,4 +8,15 @@
             </general>
         </retoomni>
     </default>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <retoomni>
+            <general>
+                <enable>1</enable>
+            </general>
+        </retoomni>
+    </default>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </config>

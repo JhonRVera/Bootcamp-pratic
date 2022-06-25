@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="datos_blog" resource="default" engine="innodb" comment="Tabla Blog">
@@ -14,4 +15,22 @@
             <column name="blog_id"/>
         </constraint>
     </table>
+=======
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="datos_blog" resource="default" engine="innodb" comment="Tabla Blog">
+        <column xsi:type="int" name="blog_id" padding="11" unsigned="false" nullable="false" identity="true" comment="Blog id"/>
+        <column xsi:type="varchar" name="titulo" length="255"  nullable="false"  comment="titulo"/>
+        <column xsi:type="timestamp" name="fecha_creacion" nullable="false" default="CURRENT_TIMESTAMP" comment="User Opinion Fecha Creacion"/>
+        <column xsi:type="timestamp" name="fecha_publicacion" nullable="false" default="CURRENT_TIMESTAMP" comment="User Opinion Fecha Actualizacion"/>
+        <column xsi:type="varchar" name="status" length="255"  nullable="false"  comment="Status"/>
+        <column xsi:type="varchar" name="categoria" length="255"  nullable="false"  comment="Categoria"/>
+        <column xsi:type="varchar" name="contenido" length="255"  nullable="false"  comment="Contenido"/>
+        <column xsi:type="int" name="cantidad_comentarios" nullable="false"  comment="Cantidad comentarios"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="blog_id"/>
+        </constraint>
+    </table>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </schema>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="bootcamp_mascotas" resource="default" engine="innodb" comment="Tabla de Mascotas">
@@ -23,4 +24,31 @@
             <column name="especie"/>
         </index>
     </table>
+=======
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="bootcamp_mascotas" resource="default" engine="innodb" comment="Tabla de Mascotas">
+        <column xsi:type="int" name="entity_id" padding="11" unsigned="false" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="nombre" length="255" nullable="false" comment="Nombre"/>
+        <column xsi:type="varchar" name="especie" length="255" nullable="false" comment="Especie"/>
+        <column xsi:type="varchar" name="raza" length="255" nullable="false" comment="Raza"/>
+        <column xsi:type="int" name="edad" padding="11" unsigned="false" nullable="false" default="0" comment="Edad"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="REFERENCE_ID">
+            <column name="entity_id"/>
+        </constraint>
+        <index referenceId="BOOTCAMP_MASCOTA_NOMBRE" indexType="btree">
+            <column name="nombre"/>
+        </index>
+        <index referenceId="BOOTCAMP_MASCOTA_RAZA" indexType="btree">
+            <column name="raza"/>
+        </index>
+        <index referenceId="BOOTCAMP_MASCOTA_ESPECIA" indexType="btree">
+            <column name="especie"/>
+        </index>
+    </table>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </schema>

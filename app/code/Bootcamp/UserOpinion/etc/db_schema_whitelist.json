@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "bootcamp_useropinion": {
         "column": {
@@ -12,4 +13,20 @@
             "PRIMARY": true
         }
     }
+=======
+{
+    "bootcamp_useropinion": {
+        "column": {
+            "opinion_id": true,
+            "sku": true,
+            "user_email": true,
+            "puntuacion": true,
+            "opinion": true,
+            "fecha": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 }

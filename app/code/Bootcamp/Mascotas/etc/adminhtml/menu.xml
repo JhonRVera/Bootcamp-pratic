@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
@@ -18,4 +19,26 @@
         parent="Bootcamp_Mascotas::omnipro_bootcamp"
         resource="Bootcamp_Mascotas::mascotas_management"/>
     </menu>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+        id="Bootcamp_Mascotas::omnipro_bootcamp" 
+        title="OMNI.PRO Bootcamp" 
+        module="Bootcamp_Mascotas" 
+        sortOrder="10" 
+        parent="Magento_Catalog::catalog"
+        resource="Bootcamp_Mascotas::bootcamp"/>
+
+        <add 
+        id="Bootcamp_Mascotas::mascotas_grid" 
+        title="Mascotas gestion" 
+        module="Bootcamp_Mascotas" 
+        sortOrder="10" 
+        action="mascotas/grid/"
+        parent="Bootcamp_Mascotas::omnipro_bootcamp"
+        resource="Bootcamp_Mascotas::mascotas_management"/>
+    </menu>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </config>
