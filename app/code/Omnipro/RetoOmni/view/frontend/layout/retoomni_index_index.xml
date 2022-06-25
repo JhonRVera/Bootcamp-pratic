@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
@@ -12,4 +13,20 @@
             </block>
         </referenceContainer>
     </body>
+=======
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="omnipro.retoomni" template="Omnipro_RetoOmni::blog.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">
+                        Omnipro\RetoOmni\ViewModel\RetoOmniViewModel
+                    </argument>
+                </arguments>
+                <block name="omnipro.retoomni.form" template="Omnipro_RetoOmni::agregar_blog.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </page> 

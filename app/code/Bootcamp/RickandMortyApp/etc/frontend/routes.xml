@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
@@ -5,4 +6,13 @@
             <module name="Bootcamp_RickandMortyApp" />
         </route>
     </router>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="rickandmortyapp" frontName="rickandmorty">
+            <module name="Bootcamp_RickandMortyApp" />
+        </route>
+    </router>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </config>

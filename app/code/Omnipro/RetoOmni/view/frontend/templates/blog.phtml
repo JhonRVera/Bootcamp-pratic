@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 /** 
@@ -42,3 +43,49 @@ $viewModel = $block->getData('view_model'); ?>
 
 <h1>Agregar Blog</h1> 
 <?= $block->getChildHtml('omnipro.retoomni.form') ?>
+=======
+<?php
+
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Omnipro\RetoOmni\ViewModel\RetoOmniViewModel $viewModel
+ * 
+ * */
+
+$viewModel = $block->getData('view_model'); ?>
+
+<?php if ($viewModel->getEnabled()) : ?>
+
+    <div class="product-opinion">
+    <h1><?= $escaper->escapeHtml(__("Lista de Blog")) ?></h1>
+        <div class="aling-item">
+            <?php foreach($viewModel->getCategoria("entretenimiento") as $item): ?>
+                <div class="calification">
+                    <div class="content-product">
+
+                            <div class="botr">Titulo:<?=$escaper->escapeHtml($item->getTitulo())?></div>
+
+                            <div class="botr">Contenido: <?= $escaper->escapeHtml($item->getContenido()) ?> </div> 
+                            <div class="botr">Status: <?= $escaper->escapeHtml($item->getStatus()) ?> </div>    
+                            <div class="botr">Categoria: <?= $escaper->escapeHtml($item->getCategoria()) ?></div>
+                            <div class="botr">Fecha Creacion: <?=$escaper->escapeHtml ($block->formatTime($item->getFechaCreacion(),\IntlDateFormatter::MEDIUM,true ))?></div> 
+                            <div class="botr">Fecha Publicacion: <?=$escaper->escapeHtml ($block->formatTime($item->getFechaPublicacion(),\IntlDateFormatter::MEDIUM,true )) ?> </div> 
+
+                    </div>
+                </div>
+                <?php endforeach; ?>  
+        </div>
+</div>
+
+
+<?php else : ?>
+
+    <h1><?= $escaper->escapeHtml(__("Blog is disabled")) ?></h1>
+<?php endif;
+
+?>
+
+<h1>Agregar Blog</h1> 
+<?= $block->getChildHtml('omnipro.retoomni.form') ?>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

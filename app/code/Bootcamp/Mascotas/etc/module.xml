@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Bootcamp_Mascotas">
@@ -8,3 +9,15 @@
         </sequence>
     </module>
 </config>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Bootcamp_Mascotas">
+        <sequence>
+            <module name="Magento_Customer" />
+            <module name="Magento_Checkout" />
+            <module name="Bootcamp_RickandMortyApp" />
+        </sequence>
+    </module>
+</config>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

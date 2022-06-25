@@ -3,6 +3,58 @@
  * See COPYING.txt for license details.
  */
 
+<<<<<<< HEAD
+ 'use strict';
+
+ /**
+  * Define Themes
+  *
+  * area: area, one of (frontend|adminhtml|doc),
+  * name: theme name in format Vendor/theme-name,
+  * locale: locale,
+  * files: [
+  * 'css/styles-m',
+  * 'css/styles-l'
+  * ],
+  * dsl: dynamic stylesheet language (less|sass)
+  *
+  */
+ module.exports = {
+     blank: {
+         area: 'frontend',
+         name: 'Omnipro/bootcamp',
+         locale: 'en_US',
+         files: [
+             'css/styles-m',
+             'css/styles-l',
+             'css/email',
+             'css/email-inline'
+         ],
+         dsl: 'less'
+     },
+
+     luma: {
+         area: 'frontend',
+         name: 'Magento/luma',
+         locale: 'en_US',
+         files: [
+             'css/styles-m',
+             'css/styles-l'
+         ],
+         dsl: 'less'
+     },
+     backend: {
+         area: 'adminhtml',
+         name: 'Magento/backend',
+         locale: 'en_US',
+         files: [
+             'css/styles-old',
+             'css/styles'
+         ],
+         dsl: 'less'
+     }
+ };
+=======
 'use strict';
 
 /**
@@ -52,3 +104,4 @@ module.exports = {
         dsl: 'less'
     }
 };
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

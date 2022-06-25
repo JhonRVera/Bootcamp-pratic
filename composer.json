@@ -7,7 +7,19 @@
     ],
     "config": {
         "preferred-install": "dist",
+<<<<<<< HEAD
+        "sort-packages": true,
+        "allow-plugins": {
+            "laminas/laminas-dependency-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "magento/composer-dependency-version-audit-plugin": true,
+            "magento/composer-root-update-plugin": true,
+            "magento/inventory-composer-installer": true,
+            "magento/magento-composer-installer": true
+        }
+=======
         "sort-packages": true
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
     },
     "version": "2.4.3",
     "require": {

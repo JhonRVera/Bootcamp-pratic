@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="example" template="Bootcamp_PersonComponent::example.phtml" before="-">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="parentComponent" xsi:type="array">
+                                <item name="component" xsi:type="string">Bootcamp_PersonComponent/js/parent-component</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="provider" xsi:type="string">parentComponent.childComponent</item>
+                                    <item name="template" xsi:type="string">Bootcamp_PersonComponent/person</item>
+                                </item>
+                                <item name="children" xsi:type="array">
+                                    <item name="childComponent" xsi:type="array">
+                                        <item name="component" xsi:type="string">Bootcamp_PersonComponent/js/child-component</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="provider" xsi:type="string">parentComponent</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

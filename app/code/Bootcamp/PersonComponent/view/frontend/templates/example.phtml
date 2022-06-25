@@ -1,0 +1,18 @@
+<?php
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ * */
+?>
+<h1>PERSONA</h1>
+<div id="selector" data-bind="scope: 'parentComponent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#selector": {
+            "Magento_Ui/js/core/app": <?= /* @escapeNotVerified */ $block->getJsLayout() ?>
+        }
+    }
+</script>

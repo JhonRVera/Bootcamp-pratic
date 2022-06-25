@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
@@ -117,3 +118,124 @@
         
     </columns>
 </listing>
+=======
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">omnipro_retoomni_grid.omnipro_retoomni_grid_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/agregar"/>
+                <class>primary</class>
+                <label translate="true">Crear Nuevo Blog</label>
+            </button>
+
+        </buttons>
+        <spinner>omnipro_retoomni_columns</spinner>
+        <deps>
+            <dep>omnipro_retoomni_grid.omnipro_retoomni_grid_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="omnipro_retoomni_grid_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">blog_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Omnipro_RetoOmni::reto_blog</aclResource>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="omnipro_retoomni_grid_data_source">
+            <settings>
+                <requestFieldName>blog_id</requestFieldName>
+                <primaryFieldName>blog_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <massaction name="listing_massaction">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
+            </item>
+        </argument>
+        <action name="delete">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="type" xsi:type="string">Eliminar</item>
+                    <item name="label" xsi:type="string" translate="true">Delete</item>
+                    <item name="url" xsi:type="url" path="mageplaza_helloworld/post/massDelete"/>
+                    <item name="confirm" xsi:type="array">
+                        <item name="title" xsi:type="string" translate="true">Blog Eliminado</item>
+                        <item name="message" xsi:type="string" translate="true">Esta seguro de Eliminarlo?</item>
+                    </item>
+                </item>
+            </argument>
+        </action>
+    </massaction>
+    <columns name="omnipro_retoomni_columns">
+        <selectionsColumn name="ids">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="resizeEnabled" xsi:type="boolean">false</item>
+                    <item name="resizeDefaultWidth" xsi:type="string">55</item>
+                    <item name="indexField" xsi:type="string">blog_id</item>
+                </item>
+            </argument>
+        </selectionsColumn>
+
+        <column name="titulo" sortOrder="10">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">Titulo</label>
+            </settings>
+        </column>
+        <column name="fecha_creacion" sortOrder="13">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">fecha creacion</label>
+            </settings>
+        </column>
+        <column name="fecha_actualizacion" sortOrder="14">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">fecha actualizacion </label>
+            </settings>
+        </column>
+        <column name="status" sortOrder="15">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">status</label>
+            </settings>
+        </column>
+        <column name="contenido" sortOrder="15">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">contenido</label>
+            </settings>
+        </column>
+        <column name="categoria" sortOrder="15">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">categoria</label>
+            </settings>
+        </column>
+        <column name="cantidad_comentarios" sortOrder="15">
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">cantidad comentarios</label>
+            </settings>
+        </column>
+        
+    </columns>
+</listing>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

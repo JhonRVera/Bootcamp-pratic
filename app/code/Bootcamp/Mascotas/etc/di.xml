@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference 
@@ -27,4 +28,35 @@
             </argument>
         </arguments>
     </type>
+=======
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference 
+        for="Bootcamp\Mascotas\Api\Data\MascotasInterface"
+        type="Bootcamp\Mascotas\Model\Mascotas" />
+    <preference 
+        for="Bootcamp\Mascotas\Api\MascotasRepositoryInterface"
+        type="Bootcamp\Mascotas\Model\MascotasRepository" />
+    <preference 
+        for="Bootcamp\Mascotas\Api\Data\SearchResultsInterface"
+        type="Magento\Framework\Api\SearchResults" />
+
+    <virtualType 
+        name="Bootcamp\Mascotas\Model\ResourceModel\Mascota\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string" >bootcamp_mascotas</argument>
+            <argument name="resourceModel" xsi:type="string">Bootcamp\Mascotas\Model\ResourceModel\Mascotas</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="bootcamp_mascotas_grid_data_source" xsi:type="string">
+                    Bootcamp\Mascotas\Model\ResourceModel\Mascota\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </config>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
     <route url="/V1/mascotas" method="GET">
@@ -30,4 +31,38 @@
             <resource ref="Bootcamp_Mascotas::mascotas_management"/>
         </resources>
     </route>
+=======
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/mascotas" method="GET">
+        <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/mascotas/:id" method="GET">
+        <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/mascotas" method="POST">
+        <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Bootcamp_Mascotas::mascotas_management"/>
+        </resources>
+    </route>
+    <route url="/V1/mascotas" method="PUT">
+        <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Bootcamp_Mascotas::mascotas_management"/>
+        </resources>
+    </route>
+    <route url="/V1/mascotas/:id" method="DELETE">
+        <service class="Bootcamp\Mascotas\Api\MascotasRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Bootcamp_Mascotas::mascotas_management"/>
+        </resources>
+    </route>
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
 </routes> 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 /** 
@@ -16,3 +17,23 @@ $viewModel = $block->getData('view_model'); ?>
 
 
 
+=======
+<?php
+
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Omnipro\RetoOmni\ViewModel\RetoOmniViewModel $viewModel
+ * 
+ * */
+
+
+$viewModel = $block->getData('view_model'); ?>
+
+<h1><?= $escaper->escapeHtml(__("Carousel")) ?></h1>
+
+<?php foreach($viewModel->getCategoria("relojes") as $item): ?>
+
+
+
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e

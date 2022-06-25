@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "bootcamp/rickandmortyapp",
     "description": "",
@@ -14,4 +15,22 @@
         "registration.php"
       ]
     }
+=======
+{
+    "name": "bootcamp/rickandmortyapp",
+    "description": "",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "psr-4": {
+        "Bootcamp\\RickandMortyApp\\": ""
+      },
+      "files": [
+        "registration.php"
+      ]
+    }
+>>>>>>> 0076efc0cb4a3cc2adda505b9857017ff428095e
   }
