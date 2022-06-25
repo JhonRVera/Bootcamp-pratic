@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="bootcamp.reloja.uicomponent" template="Bootcamp_Reloj::reloj-uicomponent.phtml">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="componets" xsi:type="array">
+                        <item name="relojUiComponent" xsi:type="array">
+                            <item name="component" xsi:type="string"></item>Bootcamp_Reloj/js/reloj-uicomponent</item>
+                            <item name="template" xsi:type="string">Bootcamp_Reloj/reloj-uicomponent</item>
+                    </item>
+                
+                </argument>
+            </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

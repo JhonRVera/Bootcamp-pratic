@@ -1,0 +1,22 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<div id="banner-uicomponent" data-bind="scope: 'bannerComponent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#banner-uicomponent": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "bannerComponent": {
+                    "component": "Bootcamp_CustomerData/js/banner-uicomponent",
+                    "template": "Bootcamp_CustomerData/banner-uicomponent"
+                }
+            }
+        }
+    }
+}
+</script> 

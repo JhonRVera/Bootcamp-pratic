@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference 
+        for="Omnipro\RetoOmni\Api\Data\RetoOmniInterface"
+        type="Omnipro\RetoOmni\Model\RetoOmni" />
+    <preference 
+        for="Omnipro\RetoOmni\Api\RetoOmniRepositoryInterface"
+        type="Omnipro\RetoOmni\Model\RetoOmniRepository" />
+    <preference 
+        for="Omnipro\RetoOmni\Api\Data\SearchResultsInterface"
+        type="Magento\Framework\Api\SearchResults" />
+        
+        <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+            <arguments>
+                <argument name="collections" xsi:type="array">
+                    <item name="omnipro_retoomni_grid_data_source" xsi:type="string">
+                        Omnipro\RetoOmni\Model\ResourceModel\RetoOmni\Grid\Collection
+                    </item>
+                </argument>
+            </arguments>
+        </type>
+    <virtualType 
+        name="Omnipro\RetoOmni\Model\ResourceModel\RetoOmni\Grid\Collection"
+        type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">datos_blog</argument>
+            <argument name="resourceModel" xsi:type="string">Omnipro\RetoOmni\Model\ResourceModel\RetoOmni</argument>
+        </arguments>
+    </virtualType>
+
+</config>

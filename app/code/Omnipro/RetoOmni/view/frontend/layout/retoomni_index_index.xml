@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="omnipro.retoomni" template="Omnipro_RetoOmni::blog.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">
+                        Omnipro\RetoOmni\ViewModel\RetoOmniViewModel
+                    </argument>
+                </arguments>
+                <block name="omnipro.retoomni.form" template="Omnipro_RetoOmni::agregar_blog.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page> 

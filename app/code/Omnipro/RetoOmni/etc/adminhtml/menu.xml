@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+        id="Omnipro_RetoOmni::omnipro_retoomni" 
+        title="OMNI.PRO" 
+        module="Omnipro_RetoOmni" 
+        sortOrder="9" 
+        parent="Magento_Backend::content"
+        resource="Omnipro_RetoOmni::menu_id"/>
+
+       <add 
+       id="Omnipro_RetoOmni::omnipro_grid" 
+       title="Blog" 
+       module="Omnipro_RetoOmni" 
+       sortOrder="10" 
+       action="retoomni/grid/"
+       parent="Omnipro_RetoOmni::omnipro_retoomni"
+        resource="Omnipro_RetoOmni::menu_id"/>
+
+    </menu>
+</config>

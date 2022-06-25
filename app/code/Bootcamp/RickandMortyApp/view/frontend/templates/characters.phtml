@@ -1,0 +1,40 @@
+<?php
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Bootcamp\RickandMortyApp\ViewModel\RickAndMortyViewModel $viewModel
+ * */
+
+$viewModel = $block->getData('view_model');
+?>
+
+<?php if($viewModel->getEnabled()): ?>
+<h1><?= $escaper->escapeHtml(__("Rick and Morty Characters")) ?></h1>
+
+<div class="characters">
+    <div class="character-item"> 
+        <div class="news-tb">
+            <?php foreach( $viewModel->getCharacters() as $character ): ?>
+                    <div class="news-row">
+                        <div>
+                            <div class="character-content">
+                                <h2><?= $escaper->escapeHtml($character['name']) ?></h2><br>
+                                <div><img src="<?= $escaper->escapeUrl($character['image']) ?>" alt="<?= $escaper->escapeHtml($character['name']) ?>"></div>
+                                <div>          
+                                    <div>Estado: <?= $escaper->escapeHtml($character['status']) ?><br></div>
+                                    <div> Tipo: <?= $escaper->escapeHtml($character['type']) ?><br></div>
+                                    <div>Especie: <?= $escaper->escapeHtml($character['species']) ?><br></div>
+                                    <div>Genero: <?= $escaper->escapeHtml($character['gender']) ?><br></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?> 
+        </div>
+    </div>
+</div>
+
+<?php else: ?>
+<h1><?= $escaper->escapeHtml(__("Rick And Morty App is disabled")) ?></h1>
+<?php endif; ?>
+

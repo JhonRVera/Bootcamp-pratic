@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <marvelapp>
+            <general>
+                <enable>1</enable>
+                <api_url>http://gateway.marvel.com/v1/public/characters?ts=</api_url>
+                <publickey>ebea701c51a104f1677e622e6dbe6f56</publickey>
+                <privatekey>5acf1fa9ff728aa6e175679179fd274ec47ca8ea</privatekey>
+            </general>
+        </marvelapp>
+    </default>
+</config> 

@@ -1,0 +1,41 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<form 
+    class="form" 
+    method="POST" 
+    action="<?= $block->getUrl('useropinion/index/save') ?>"
+    data-mage-init='{"validation": {}}'
+    >
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label class="label" for="sku"><span>SKU</span></label>
+            <div class="control">
+                <input type="text" name="sku" class="input-text" data-validate='{"required": true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="user_email"><span>EMAIL</span></label>
+            <div class="control">
+                <input type="text" name="user_email" class="email2" data-validate='{"required": true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="puntuacion"><span>PUNTUACION</span></label>
+            <div class="control">
+                <input type="text" name="puntuacion" class="input-text" data-validate='{"required": true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="opinion"><span>OPINION</span></label>
+            <textarea rows="10" cols="20" class="control" type="text" name="opinion"  data-validate='{"required": true}'>  
+            </textarea>
+        </div>
+    </fieldset>    
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">Enviar</button>
+        </div>
+    </div>
+</form>

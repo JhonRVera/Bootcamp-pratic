@@ -1,0 +1,18 @@
+<?php
+/** 
+ * @var \Magento\Framework\View\Element\Template $block 
+ * @var \Magento\Framework\Escaper $escaper
+ * */
+?>
+
+<h1>Reloj Ui Component</h1>
+
+<div id="reloj-uicomponent" data-bind="scope:'relojUiComponent'">
+<!-- ko template: getTemplate()--> <!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+{
+    "#reloj-uicomponent": {
+        "Magento_Ui/js/core/app": <?= $block->getJsLayout() ?>
+}
+</script>

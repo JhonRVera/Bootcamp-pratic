@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var \Magento\Customer\Block\Account\AuthorizationLink $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+$dataPostParam = '';
+if ($block->isLoggedIn()) {
+    $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+}
+?>
+
+
+<li style="text-decoration: ;" class="link authorization-link" data-label="<?= $escaper->escapeHtml(__('or')) ?>">
+    <a <?= /* @noEscape */ $block->getLinkAttributes() ?>
+    <?= /* @noEscape */ $dataPostParam ?>><span> &nbsp|&nbsp </span><?= $escaper->escapeHtml('Iniciar sésion') ?>&nbsp</a> 
+</li>
+
+<div class="navegacion">
+        <img style="width: 28px; height: 28px;" src="<?= $this->getViewFileUrl('images/Phone.svg') ?>" alt="phone">
+        <a href="" style="margin: 0 2rem;" ><?= $escaper->escapeHtml("Tel (+507)204-3030") ?> </a>
+
+        <img style="width: 28px; height: 28px;" src="<?= $this->getViewFileUrl('images/Whatsapp.svg') ?>" alt="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=50766079000&text=" target="_blank"><?= $escaper->escapeHtml("(+507)6607-9000") ?></a>
+
+        <a href="/horario" style="margin: 0 2rem;"><img src="<?= $this->getViewFileUrl('images/Horario-Animaciones-v1.webp') ?>" alt="Horarios"></a>
+
+        <a href="/legales"><img src="<?= $this->getViewFileUrl('images/Tarjeta-mb-Bac-PF-Rojo2_2.gif') ?>" alt="Tarjetas"></a>
+</div>

@@ -1,0 +1,42 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<form 
+    class="form" 
+    method="POST" 
+    action="<?= $block->getUrl('mascotas/index/save') ?>"
+    data-mage-init='{"validation": {}}'
+    >
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label class="label" for="nombre"><span>Nombre</span></label>
+            <div class="control">
+                <input type="text" name="nombre" class="input-text" data-validate='{"required": true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="especie"><span>Especie</span></label>
+            <div class="control">
+                <input type="text" name="especie" class="input-text" data-validate='{"required": true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="raza"><span>Raza</span></label>
+            <div class="control">
+                <input type="text" name="raza" class="input-text" data-validate='{"required": true}'>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="edad"><span>Edad</span></label>
+            <div class="control">
+                <input type="text" name="edad" class="input-text" data-validate='{"required": true}'>
+            </div>
+        </div>
+    </fieldset>    
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">Enviar</button>
+        </div>
+    </div>
+</form>
